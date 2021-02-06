@@ -1,0 +1,431 @@
+<div class=" header pb-6 pt-6">
+ 
+</div>
+
+<div class=" container-fluid mt--6">
+  <div class="row">
+    <div class="col-sm-12 text-right">
+      <button
+      class=" btn btn-sm btn-info"
+        data-target="#modal-default"
+        data-toggle="modal"
+        type="button"
+        (click)="openDefaultModal(modalDefault)"
+      >
+        New Utility Registry
+      </button>    
+      <ng-template #modalDefault>
+        <div class=" modal-header">
+          <h6 class=" modal-title" id="modal-title-default">
+            Create New Utility
+          </h6>
+  
+          <button
+            aria-label="Close"
+            class=" close"
+            data-dismiss="modal"
+            type="button"
+            (click)="defaultModal.hide()"
+          >
+            <span aria-hidden="true"> × </span>
+          </button>
+        </div>
+  
+        <div class=" modal-body">
+          <div class="row">
+            <div class="col-6">
+              <label
+                class=" form-control-label"
+                for="exampleFormControlTextarea1"
+              >
+                Location ID
+              </label>
+              <input
+                class="form-control mb-2"
+                placeholder=""
+                type="text"
+              />
+            </div>
+            <div class="col-6">
+              <label
+                class=" form-control-label"
+                for="exampleFormControlTextarea1"
+              >
+                Category
+              </label>
+              <select class=" form-control mb-2" id="exampleFormControlSelect3">
+                <option> Water </option>         
+                <option> Electricity </option>
+              </select>
+            </div>                  
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <label
+                class=" form-control-label"
+                for="exampleFormControlTextarea1"
+              >
+                Enter Water Max. Consumption(m3)
+              </label>
+              <input
+                class="form-control mb-2"
+                placeholder=""
+                type="text"
+              />
+            </div>
+            <div class="col-6">
+              <label
+                class=" form-control-label"
+                for="exampleFormControlTextarea1"
+              >
+                Enter Max. Electricity Consumption (kWh)
+              </label>
+              <input
+                class="form-control mb-2"
+                placeholder=""
+                type="text"
+              />
+            </div>                       
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <label
+                class=" form-control-label"
+                for="exampleFormControlTextarea1"
+              >
+                Total Water Consumption(RM)
+              </label>
+              <input
+                class="form-control mb-2"
+                placeholder="100"
+                type="text"
+              />
+            </div>
+            <div class="col-6">
+              <label
+                class=" form-control-label"
+                for="exampleFormControlTextarea1"
+              >
+                Total Electricity Consumption (RM)
+              </label>
+              <input
+                class="form-control mb-2"
+                placeholder="70"
+                type="text"
+              />
+            </div>                       
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <label
+                class=" form-control-label"
+                for="exampleFormControlTextarea1"
+              >
+                 Date
+              </label>
+              <input
+                class="form-control mb-2"
+                placeholder=""
+                type="date"
+              />
+            </div>                        
+            
+          </div>
+          <div class=" modal-footer" style="justify-content: end;">
+            <button class=" btn btn-danger" type="button">
+              Back
+            </button>
+  
+            <button
+              class=" btn btn-success"
+              data-dismiss="modal"
+              type="button"
+              (click)="defaultModal.hide()"
+            >
+               Submit
+            </button>
+          </div>
+        </div>
+      </ng-template>    
+    </div>
+  </div>
+  <div class=" row">
+    <div class=" col-xl-12">
+      <div class=" card">
+        <div class=" card-header">
+          <div class="row" style="justify-content: space-between;">
+            <div class="col-auto"><h5 class=" h3 mb-0">Monthly Utility Consumption</h5></div>
+          </div>
+        </div>
+        
+        <div class=" card-body">
+          <div class="chart" id="chartdiv18">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=" row">
+    <div class=" col-xl-12">
+      <div class=" card">
+        <div class=" card-header">
+          <div class="row" style="justify-content: space-between;">
+            <div class="col-6"><h5 class=" h3 mb-0">Utility Consumption Based on Location</h5></div>
+          </div>
+        </div>
+        
+        <div class=" card-body">
+          <div class="chart" id="chartdiv19">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 text-right">
+      <button
+      class=" btn btn-sm btn-info"
+        data-target="#modal-default"
+        data-toggle="modal"
+        type="button"
+        (click)="openDefaultModal2(modalDefault2)"
+      >
+        New Space Registry
+      </button>    
+      <ng-template #modalDefault2>
+        <div class=" modal-header">
+          <h6 class=" modal-title" id="modal-title-default">
+            Create New Space Registry
+          </h6>
+  
+          <button
+            aria-label="Close"
+            class=" close"
+            data-dismiss="modal"
+            type="button"
+            (click)="defaultModal2.hide()"
+          >
+            <span aria-hidden="true"> × </span>
+          </button>
+        </div>
+  
+        <div class=" modal-body">
+          <div class="row">
+            <div class="col-6">
+              <label
+                class=" form-control-label"
+                for="exampleFormControlTextarea1"
+              >
+                Block
+              </label>
+              <input
+                class="form-control mb-2"
+                placeholder=""
+                type="text"
+              />
+            </div>
+            <div class="col-6">
+              <label
+                class=" form-control-label"
+                for="exampleFormControlTextarea1"
+              >
+                Level
+              </label>
+              <input
+                class="form-control mb-2"
+                placeholder=""
+                type="text"
+              />
+            </div>                  
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <label
+                class=" form-control-label"
+                for="exampleFormControlTextarea1"
+              >
+                Area
+              </label>
+              <input
+                class="form-control mb-2"
+                placeholder=""
+                type="text"
+              />
+            </div>
+            <div class="col-6">
+              <label
+                class=" form-control-label"
+                for="exampleFormControlTextarea1"
+              >
+                Room / Hall
+              </label>
+              <input
+                class="form-control mb-2"
+                placeholder=""
+                type="text"
+              />
+            </div>                       
+          </div><br>
+          <div class="row">
+            <div class="col-6">
+              <label
+                class=" form-control-label"
+                for="exampleFormControlTextarea1"
+              >
+                Location ID
+              </label>
+              <input
+                class="form-control mb-2"
+                placeholder="LI001"
+                type="text"
+              />
+            </div>
+            <div class="col-6">
+              
+              <input
+                class=" custom-file-input"
+                id="customFileLang"
+                lang="en"
+                type="file"
+              />
+
+              <label class=" custom-file-label" for="customFileLang">
+                Upload Floor Plan
+              </label>
+            </div>                      
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <label
+                class=" form-control-label"
+                for="exampleFormControlTextarea1"
+              >
+                 Date
+              </label>
+              <input
+                class="form-control mb-2"
+                placeholder=""
+                type="date"
+              />
+            </div>                        
+            
+          </div>
+          <div class=" modal-footer" style="justify-content: end;">
+            <button class=" btn btn-danger" type="button">
+              Back
+            </button>
+  
+            <button
+              class=" btn btn-success"
+              data-dismiss="modal"
+              type="button"
+              (click)="defaultModal.hide()"
+            >
+               Submit
+            </button>
+          </div>
+        </div>
+      </ng-template>    
+    </div>
+  </div>
+  <div class=" row">
+    <div class=" col-xl-6">
+      <div class=" card">
+        
+        <div class=" card-body">
+          <div class="chart" id="chartdiv20">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class=" col-xl-6">
+      <div class=" card">
+        <div class=" card-header"><h5 class=" h3 mb-0">Space Under Construction</h5></div>
+
+        <div class=" card-body p-0">
+          <ul class=" list-group list-group-flush" data-toggle="checklist">
+            <li
+              class=" checklist-entry list-group-item flex-column align-items-start py-4 px-4"
+            >
+              <div class=" checklist-item checklist-item-success">
+                <div class=" checklist-info">
+                  <h5 class=" checklist-title mb-0">Room XYZ is under construction</h5>
+
+                </div>
+
+                <div>
+                  <div
+                    class=" custom-control custom-checkbox custom-checkbox-success"
+                  >
+                    <input
+                      checked="checked"
+                      class=" custom-control-input"
+                      id="chk-todo-task-1"
+                      type="checkbox"
+                    />
+
+                    <label class=" custom-control-label" for="chk-todo-task-1">
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li
+              class=" checklist-entry list-group-item flex-column align-items-start py-4 px-4"
+            >
+              <div class=" checklist-item checklist-item-warning">
+                <div class=" checklist-info">
+                  <h5 class=" checklist-title mb-0">Hall 13 is under construction</h5>
+
+                </div>
+
+                <div>
+                  <div
+                    class=" custom-control custom-checkbox custom-checkbox-warning"
+                  >
+                    <input
+                      class=" custom-control-input"
+                      id="chk-todo-task-2"
+                      type="checkbox"
+                    />
+
+                    <label class=" custom-control-label" for="chk-todo-task-2">
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li
+              class=" checklist-entry list-group-item flex-column align-items-start py-4 px-4"
+            >
+              <div class=" checklist-item checklist-item-info">
+                <div class=" checklist-info">
+                  <h5 class=" checklist-title mb-0">etc</h5>
+
+                </div>
+
+                <div>
+                  <div
+                    class=" custom-control custom-checkbox custom-checkbox-info"
+                  >
+                    <input
+                      class=" custom-control-input"
+                      id="chk-todo-task-3"
+                      type="checkbox"
+                    />
+
+                    <label class=" custom-control-label" for="chk-todo-task-3">
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

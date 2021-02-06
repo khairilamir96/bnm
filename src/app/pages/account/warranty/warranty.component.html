@@ -1,0 +1,642 @@
+<div class=" header pb-6 pt-6">
+</div>
+
+<div class=" container-fluid mt--6">
+  <div class=" row">
+    <div class=" col-xl-6">
+      <div class=" card">
+        <div class=" card-header">
+          <div class="row" style="justify-content: space-between;">
+            <div class="col-auto"><h5 class=" h3 mb-0">Asset Under Lease</h5></div>
+          </div>
+        </div>
+        
+        <div class=" card-body">
+          <div class="chart" id="chartdiv30">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class=" col-xl-6">
+      <div class=" card">
+        <div class=" card-header">
+          <div class="row" style="justify-content: space-between;">
+            <div class="col-auto"><h5 class=" h3 mb-0">Asset's Lease to Termination/ Completion</h5></div>
+          </div>
+        </div>
+        
+        <div class=" card-body">
+          <div class="chart" id="chartdiv31">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=" row">
+    <div class=" col-xl-6">
+      <div class=" card">
+        <div class=" card-header">
+          <div class="row" style="justify-content: space-between;">
+            <div class="col-auto"><h5 class=" h3 mb-0">Asset Under Warranty</h5></div>
+          </div>
+        </div>
+        
+        <div class=" card-body">
+          <div class="chart" id="chartdiv32">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class=" col-xl-6">
+      <div class=" card">
+        <div class=" card-header">
+          <div class="row" style="justify-content: space-between;">
+            <div class="col-auto"><h5 class=" h3 mb-0">Asset's Warranty to Termination/ Completion</h5></div>
+          </div>
+        </div>
+        
+        <div class=" card-body">
+          <div class="chart" id="chartdiv33">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=" row">
+    <div class=" col-xl-6">
+      <div class=" card">
+        <div class=" card-header">
+          <div class="row">
+            <div class="col-sm-6">
+              <h3 class=" mb-0">Lease Registry List</h3>
+            </div>
+            <div class="col-sm-6 text-right">
+              <button
+              class=" btn btn-sm btn-info"
+                data-target="#modal-default"
+                data-toggle="modal"
+                type="button"
+                (click)="openDefaultModal(modalDefault)"
+              >
+                New Lease Registry
+              </button>    
+              <ng-template #modalDefault>
+                <div class=" modal-header">
+                  <h6 class=" modal-title" id="modal-title-default">
+                    Create New Registry
+                  </h6>
+
+                  <button
+                    aria-label="Close"
+                    class=" close"
+                    data-dismiss="modal"
+                    type="button"
+                    (click)="defaultModal.hide()"
+                  >
+                    <span aria-hidden="true"> × </span>
+                  </button>
+                </div>
+
+                <div class=" modal-body">                  
+                  <div class="row">                   
+                    <div class="col-6">
+                      <label
+                        class=" form-control-label"
+                        for="exampleFormControlTextarea1"
+                      >
+                        Asset ID
+                      </label>
+                      <input
+                        class="form-control mb-2"
+                        placeholder=""
+                        type="text"
+                      />
+                    </div>
+                    <div class="col-6">
+                      <label
+                        class=" form-control-label"
+                        for="exampleFormControlTextarea1"
+                      >
+                        Owner
+                      </label>
+                      <input
+                        class="form-control mb-2"
+                        placeholder=""
+                        type="text"
+                      />
+                    </div>                   
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <label
+                        class=" form-control-label"
+                        for="exampleFormControlTextarea1"
+                      >
+                        Length of Lease
+                      </label>
+                      <input
+                        class="form-control mb-2"
+                        placeholder=""
+                        type="text"
+                      />
+                    </div>
+                    <div class="col-6">
+                      <label
+                        class=" form-control-label"
+                        for="exampleFormControlTextarea1"
+                      >
+                        Start Date
+                      </label>
+                      <input
+                        class="form-control mb-2"
+                        placeholder=""
+                        type="date"
+                      />
+                    </div>                       
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <label
+                        class=" form-control-label"
+                        for="exampleFormControlTextarea1"
+                      >
+                        Finish Date
+                      </label>
+                      <input
+                        class="form-control mb-2"
+                        placeholder=""
+                        type="date"
+                      />
+                    </div>                       
+                    <div class="col-6">
+                      <label
+                        class=" form-control-label"
+                        for="exampleFormControlTextarea1"
+                      >
+                        Notification Reminder
+                      </label>
+                      <select class=" form-control mb-2" id="exampleFormControlSelect3">
+                        <option> 1 Week Before </option>         
+                        <option> 2 Weeks Before </option> 
+                        <option> 1 Month Before </option> 
+                        <option> 2 Months Before </option>  
+                        <option> 3 Months Before </option>    
+                      </select>
+                    </div>  
+                    
+                  </div>
+                  <div class="row">                        
+                    <div class="col-6">
+                      <label
+                        class=" form-control-label"
+                        for="exampleFormControlTextarea1"
+                      >
+                        Vendor
+                      </label>
+                      <input
+                        class="form-control mb-2"
+                        placeholder=""
+                        type="text"
+                      />
+                    </div>
+                    
+                  </div>
+                  <div class=" modal-footer" style="justify-content: end;">
+                    <button class=" btn btn-danger" type="button">
+                      Back
+                    </button>
+  
+                    <button
+                      class=" btn btn-success"
+                      data-dismiss="modal"
+                      type="button"
+                      (click)="defaultModal.hide()"
+                    >
+                       Submit
+                    </button>
+                  </div>
+                </div>
+              </ng-template>    
+            </div>
+          </div>
+        </div>       
+        <div class=" card-body">
+            
+                <div class=" table-responsive">
+                  <table class=" table align-items-center table-flush">
+                    <thead class=" thead-light">
+                      <tr>
+                        <th>Asset ID</th>
+            
+                        <th>Owner</th>
+            
+                        <th>Length of Lease</th>
+            
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                      </tr>
+                    </thead>
+            
+                    <tbody>
+                      <tr>
+                        <td>AID01</td>
+                        <td>Owner 1</td>
+                        <td>1 week</td>
+                        <td>1/1/2020</td>
+                        <td>2/1/2020</td>
+                      </tr>
+                      <tr>
+                        <td>AID02</td>
+                        <td>Owner 2</td>
+                        <td>2 weeks</td>
+                        <td>3/1/2020</td>
+                        <td>5/1/2020</td>
+                      </tr>
+                      <tr>
+                        <td>AID03</td>
+                        <td>Owner 3</td>
+                        <td>1 week</td>
+                        <td>1/1/2020</td>
+                        <td>3/1/2020</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+             </div>
+          </div>
+        </div>
+    <div class=" col-xl-6">
+      <div class=" card">
+        <div class=" card-header"><h5 class=" h3 mb-0">Notifications</h5></div>
+
+        <div class=" card-body p-0">
+          <ul class=" list-group list-group-flush" data-toggle="checklist">
+            <li
+              class=" checklist-entry list-group-item flex-column align-items-start py-4 px-4"
+            >
+              <div class=" checklist-item checklist-item-success">
+                <div class=" checklist-info">
+                  <h5 class=" checklist-title mb-0">Pump 21 is due for new lease</h5>
+
+                </div>
+
+                <div>
+                  <div
+                    class=" custom-control custom-checkbox custom-checkbox-success"
+                  >
+                    <input
+                      checked="checked"
+                      class=" custom-control-input"
+                      id="chk-todo-task-1"
+                      type="checkbox"
+                    />
+
+                    <label class=" custom-control-label" for="chk-todo-task-1">
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li
+              class=" checklist-entry list-group-item flex-column align-items-start py-4 px-4"
+            >
+              <div class=" checklist-item checklist-item-warning">
+                <div class=" checklist-info">
+                  <h5 class=" checklist-title mb-0">Pump 21 is due for new warranty</h5>
+
+                </div>
+
+                <div>
+                  <div
+                    class=" custom-control custom-checkbox custom-checkbox-warning"
+                  >
+                    <input
+                      class=" custom-control-input"
+                      id="chk-todo-task-2"
+                      type="checkbox"
+                    />
+
+                    <label class=" custom-control-label" for="chk-todo-task-2">
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li
+              class=" checklist-entry list-group-item flex-column align-items-start py-4 px-4"
+            >
+              <div class=" checklist-item checklist-item-info">
+                <div class=" checklist-info">
+                  <h5 class=" checklist-title mb-0">Lift 10 is 2 weeks from lease due</h5>
+
+                </div>
+
+                <div>
+                  <div
+                    class=" custom-control custom-checkbox custom-checkbox-info"
+                  >
+                    <input
+                      class=" custom-control-input"
+                      id="chk-todo-task-3"
+                      type="checkbox"
+                    />
+
+                    <label class=" custom-control-label" for="chk-todo-task-3">
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class=" checklist-entry list-group-item flex-column align-items-start py-4 px-4"
+            >
+              <div class=" checklist-item checklist-item-info">
+                <div class=" checklist-info">
+                  <h5 class=" checklist-title mb-0">Lift 11 is 2 weeks from lease due</h5>
+
+                </div>
+
+                <div>
+                  <div
+                    class=" custom-control custom-checkbox custom-checkbox-info"
+                  >
+                    <input
+                      class=" custom-control-input"
+                      id="chk-todo-task-3"
+                      type="checkbox"
+                    />
+
+                    <label class=" custom-control-label" for="chk-todo-task-3">
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <h3 class=" mb-0">Warranty List</h3>
+      </div>
+      <div class="col-sm-6 text-right">
+        <button
+        class=" btn btn-sm btn-info"
+          data-target="#modal-default"
+          data-toggle="modal"
+          type="button"
+          (click)="openDefaultModal(modalDefault)"
+        >
+          New Warranty Registry
+        </button>    
+        <ng-template #modalDefault>
+          <div class=" modal-header">
+            <h6 class=" modal-title" id="modal-title-default">
+              Create New Registry
+            </h6>
+
+            <button
+              aria-label="Close"
+              class=" close"
+              data-dismiss="modal"
+              type="button"
+              (click)="defaultModal.hide()"
+            >
+              <span aria-hidden="true"> × </span>
+            </button>
+          </div>
+
+          <div class=" modal-body">                  
+            <div class="row">                   
+              <div class="col-6">
+                <label
+                  class=" form-control-label"
+                  for="exampleFormControlTextarea1"
+                >
+                  Asset ID
+                </label>
+                <input
+                  class="form-control mb-2"
+                  placeholder=""
+                  type="text"
+                />
+              </div>
+              <div class="col-6">
+                <label
+                  class=" form-control-label"
+                  for="exampleFormControlTextarea1"
+                >
+                  Owner
+                </label>
+                <input
+                  class="form-control mb-2"
+                  placeholder=""
+                  type="text"
+                />
+              </div>                   
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <label
+                  class=" form-control-label"
+                  for="exampleFormControlTextarea1"
+                >
+                  Length of Lease
+                </label>
+                <input
+                  class="form-control mb-2"
+                  placeholder=""
+                  type="text"
+                />
+              </div>
+              <div class="col-6">
+                <label
+                  class=" form-control-label"
+                  for="exampleFormControlTextarea1"
+                >
+                  Start Date
+                </label>
+                <input
+                  class="form-control mb-2"
+                  placeholder=""
+                  type="date"
+                />
+              </div>                       
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <label
+                  class=" form-control-label"
+                  for="exampleFormControlTextarea1"
+                >
+                  Finish Date
+                </label>
+                <input
+                  class="form-control mb-2"
+                  placeholder=""
+                  type="date"
+                />
+              </div>                       
+              <div class="col-6">
+                <label
+                  class=" form-control-label"
+                  for="exampleFormControlTextarea1"
+                >
+                  Notification Reminder
+                </label>
+                <select class=" form-control mb-2" id="exampleFormControlSelect3">
+                  <option> 1 Week Before </option>         
+                  <option> 2 Weeks Before </option> 
+                  <option> 1 Month Before </option> 
+                  <option> 2 Months Before </option>  
+                  <option> 3 Months Before </option>    
+                </select>
+              </div>  
+              
+            </div>
+            <div class="row">                        
+              <div class="col-6">
+                <label
+                  class=" form-control-label"
+                  for="exampleFormControlTextarea1"
+                >
+                  Vendor
+                </label>
+                <input
+                  class="form-control mb-2"
+                  placeholder=""
+                  type="text"
+                />
+              </div>
+              
+            </div>
+            <div class=" modal-footer" style="justify-content: end;">
+              <button class=" btn btn-danger" type="button">
+                Back
+              </button>
+
+              <button
+                class=" btn btn-success"
+                data-dismiss="modal"
+                type="button"
+                (click)="defaultModal.hide()"
+              >
+                 Submit
+              </button>
+            </div>
+          </div>
+        </ng-template>    
+      </div>
+    </div>
+    <div class=" row">
+      <div class=" col-xl-12">
+        <div class=" card">
+          <div class=" card-header">
+            <h3 class=" mb-0">Warranty List</h3>
+          </div>       
+          <div class=" card-body">
+              
+            <div class=" table-responsive">
+              <table class=" table align-items-center table-flush">
+                <thead class=" thead-light">
+                  <tr>
+                    <th>No.</th>
+        
+                    <th>Asset ID</th>
+        
+                    <th>Owner</th>
+                    <th>Length of Warranty</th>
+                    <th>Date Registered</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+        
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>AID01</td>
+                    <td>Owner 1</td>
+                    <td>1 week</td>
+                    <td>12/03/2020</td>
+  
+                    <td>
+                      <a
+                      class="table-action"
+                      tooltip="Edit"
+                      placement="top"
+                    >
+                      <i class=" fas fa-user-edit"> </i>
+                    </a>
+  
+                    <a
+                      class="table-action"
+                      tooltip="Delete"
+                      placement="top"
+                    >
+                      <i class=" fas fa-trash"> </i>
+                    </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>AID02</td>
+                    <td>Owner 2</td>
+                    <td>2 weeks</td>
+                    <td>1/03/2020</td>
+  
+                    <td>
+                      <a
+                      class="table-action"
+                      tooltip="Edit"
+                      placement="top"
+                    >
+                      <i class=" fas fa-user-edit"> </i>
+                    </a>
+  
+                    <a
+                      class="table-action"
+                      tooltip="Delete"
+                      placement="top"
+                    >
+                      <i class=" fas fa-trash"> </i>
+                    </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>AID03</td>
+                    <td>Owner 3</td>
+                    <td>1 month</td>
+                    <td>10/01/2020</td>
+  
+                    <td>
+                      <a
+                      class="table-action"
+                      tooltip="Edit"
+                      placement="top"
+                    >
+                      <i class=" fas fa-user-edit"> </i>
+                    </a>
+  
+                    <a
+                      class="table-action"
+                      tooltip="Delete"
+                      placement="top"
+                    >
+                      <i class=" fas fa-trash"> </i>
+                    </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+               </div>
+            </div>
+      </div>
+    </div>
+</div>
+

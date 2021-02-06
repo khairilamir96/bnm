@@ -1,0 +1,454 @@
+<div class=" header pb-6 pt-6">
+  <div class=" container-fluid">
+    <div class=" header-body">
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-body text-center">
+              <img
+                width="80%"
+                src="assets/img/brand/budget.png"
+              /><br /><br /><br />
+              <b>Allocated<br />Asset<br /><br />1.5 M</b>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body text-center">
+              <img
+                width="80%"
+                src="assets/img/brand/document.png"
+              /><br /><br /><br />
+              <b>Used Asset Across Portfolio<br /><br />900 K</b>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body text-center">
+              <img width="80%" src="assets/img/brand/cost.png" /><br /><br /><br />
+              <b>Used Asset Percentage<br /><br />70%</b>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body text-center">
+              <img
+                width="80%"
+                src="assets/img/brand/financial.png"
+              /><br /><br /><br />
+              <b
+                >Estimated Cost Across Portfolio<br /><br />
+                850 K</b
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body text-center">
+              <img
+                width="80%"
+                src="assets/img/brand/money-bag.png"
+              /><br /><br /><br />
+              <b>Actual Cost Across Portfolio<br /><br />2.5 M</b>
+            </div>
+          </div>
+        </div>
+      </div>    
+    </div>
+  </div>
+</div>
+
+<div class=" container-fluid mt--6">
+  <div class=" row">
+    <div class=" col-xl-12">
+      <div class=" card">
+        <div class=" card-header">
+          <div class="row" style="justify-content: space-between;">
+            <div class="col-auto"><h5 class=" h3 mb-0">Asset Category</h5></div>
+          </div>
+        </div>
+        
+        <div class=" card-body">
+          <div class="chart" id="chartdiv">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=" row">
+    <div class=" col-xl-12">
+      <div class=" card">
+        <div class=" card-header">
+          <div class="row" style="justify-content: space-between;">
+            <div class="col-6"><h5 class=" h3 mb-0">Daily Consumable</h5></div>
+          </div>
+        </div>
+        
+        <div class=" card-body">
+          <div class="chart" id="chartdiv1">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=" row">
+    <div class=" col-xl-12">
+      <div class=" card">
+        <div class=" card-header">
+          <div class="row" style="justify-content: space-between;">
+            <div class="col-6"><h5 class=" h3 mb-0">Monhtly Purchase/Acquisition</h5></div>
+          </div>
+        </div>
+        
+        <div class=" card-body">
+          <div class="chart" id="chartdiv2">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=" row">
+    <div class=" col-xl-6">
+      <div class=" card">
+        <div class=" row">
+          <div class=" col">
+            <div class=" card card-calendar">
+              <div class=" card-header"><h5 class=" h3 mb-0">Maintenance Timeline</h5></div>
+      
+              <div class=" card-body p-0">
+                <div class=" calendar" data-toggle="calendar" id="calendar"></div>
+              </div>
+            </div>
+      
+            <div
+              aria-hidden="true"
+              aria-labelledby="new-event-label"
+              class=" modal fade"
+              id="new-event"
+              role="dialog"
+              tabindex="-1"
+            >
+              <div
+                class=" modal-dialog modal-dialog-centered modal-secondary"
+                role="document"
+              >
+                <ng-template #modalAdd>
+                  <div class=" modal-body">
+                    <form class=" new-event--form">
+                      <div class=" form-group">
+                        <label class=" form-control-label"> Event title </label>
+      
+                        <input
+                          class=" form-control form-control-alternative new-event--title"
+                          id="new-event--title"
+                          placeholder="Event Title"
+                          type="text"
+                          (change)="getNewEventTitle($event)"
+                        />
+                      </div>
+      
+                      <div class=" form-group mb-0">
+                        <label class=" form-control-label d-block mb-3">
+                          Status color
+                        </label>
+      
+                        <div
+                          class=" btn-group btn-group-toggle btn-group-colors event-tag"
+                          data-toggle="buttons"
+                        >
+                          <label
+                            class=" btn bg-info"
+                            [ngClass]="{ active: radios === 'bg-info' }"
+                          >
+                            <input
+                              autocomplete="off"
+                              checked="checked"
+                              name="event-tag"
+                              type="radio"
+                              value="bg-info"
+                              (click)="radios = 'bg-info'"
+                            />
+                          </label>
+      
+                          <label
+                            class=" btn bg-warning"
+                            [ngClass]="{ active: radios === 'bg-warning' }"
+                          >
+                            <input
+                              autocomplete="off"
+                              name="event-tag"
+                              type="radio"
+                              value="bg-warning"
+                              (click)="radios = 'bg-warning'"
+                            />
+                          </label>
+      
+                          <label
+                            class=" btn bg-danger"
+                            [ngClass]="{ active: radios === 'bg-danger' }"
+                          >
+                            <input
+                              autocomplete="off"
+                              name="event-tag"
+                              type="radio"
+                              value="bg-danger"
+                              (click)="radios = 'bg-danger'"
+                            />
+                          </label>
+      
+                          <label
+                            class=" btn bg-success"
+                            [ngClass]="{ active: radios === 'bg-success' }"
+                          >
+                            <input
+                              autocomplete="off"
+                              name="event-tag"
+                              type="radio"
+                              value="bg-success"
+                              (click)="radios = 'bg-success'"
+                            />
+                          </label>
+      
+                          <label
+                            class=" btn bg-default"
+                            [ngClass]="{ active: radios === 'bg-default' }"
+                          >
+                            <input
+                              autocomplete="off"
+                              name="event-tag"
+                              type="radio"
+                              value="bg-default"
+                              (click)="radios = 'bg-default'"
+                            />
+                          </label>
+      
+                          <label
+                            class=" btn bg-primary"
+                            [ngClass]="{ active: radios === 'bg-primary' }"
+                          >
+                            <input
+                              autocomplete="off"
+                              name="event-tag"
+                              type="radio"
+                              value="bg-primary"
+                              (click)="radios = 'bg-primary'"
+                            />
+                          </label>
+                        </div>
+                      </div>
+      
+                      <input class=" new-event--start" type="hidden" />
+      
+                      <input class=" new-event--end" type="hidden" />
+                    </form>
+                  </div>
+      
+                  <div class=" modal-footer">
+                    <button
+                      class=" btn btn-primary new-event--add"
+                      type="submit"
+                      (click)="addNewEvent()"
+                    >
+                      Add event
+                    </button>
+      
+                    <button
+                      (click)="addModal.hide()"
+                      class=" btn btn-link ml-auto"
+                      data-dismiss="modal"
+                      type="button"
+                    >
+                      Close
+                    </button>
+                  </div>
+                </ng-template>
+              </div>
+            </div>
+      
+            <div
+              aria-hidden="true"
+              aria-labelledby="edit-event-label"
+              class=" modal fade"
+              id="edit-event"
+              role="dialog"
+              tabindex="-1"
+            >
+              <div
+                class=" modal-dialog modal-dialog-centered modal-secondary"
+                role="document"
+              >
+                <ng-template #modalEdit>
+                  <div class=" modal-body">
+                    <form class=" edit-event--form">
+                      <div class=" form-group">
+                        <label class=" form-control-label"> Event title </label>
+      
+                        <input
+                          class=" form-control form-control-alternative edit-event--title"
+                          placeholder="Event Title"
+                          type="text"
+                          value="{{ eventTitle }}"
+                          (change)="getNewEventTitle($event)"
+                        />
+                      </div>
+      
+                      <div class=" form-group">
+                        <label class=" form-control-label d-block mb-3">
+                          Status color
+                        </label>
+      
+                        <div
+                          class=" btn-group btn-group-toggle btn-group-colors event-tag mb-0"
+                          data-toggle="buttons"
+                        >
+                          <label
+                            class=" btn bg-info"
+                            [ngClass]="{ active: radios === 'bg-info' }"
+                          >
+                            <input
+                              autocomplete="off"
+                              checked="checked"
+                              name="event-tag"
+                              type="radio"
+                              value="bg-info"
+                              (click)="radios = 'bg-info'"
+                            />
+                          </label>
+      
+                          <label
+                            class=" btn bg-warning"
+                            [ngClass]="{ active: radios === 'bg-warning' }"
+                          >
+                            <input
+                              autocomplete="off"
+                              name="event-tag"
+                              type="radio"
+                              value="bg-warning"
+                              (click)="radios = 'bg-warning'"
+                            />
+                          </label>
+      
+                          <label
+                            class=" btn bg-danger"
+                            [ngClass]="{ active: radios === 'bg-danger' }"
+                          >
+                            <input
+                              autocomplete="off"
+                              name="event-tag"
+                              type="radio"
+                              value="bg-danger"
+                              (click)="radios = 'bg-danger'"
+                            />
+                          </label>
+      
+                          <label
+                            class=" btn bg-success"
+                            [ngClass]="{ active: radios === 'bg-success' }"
+                          >
+                            <input
+                              autocomplete="off"
+                              name="event-tag"
+                              type="radio"
+                              value="bg-success"
+                              (click)="radios = 'bg-success'"
+                            />
+                          </label>
+      
+                          <label
+                            class=" btn bg-default"
+                            [ngClass]="{ active: radios === 'bg-default' }"
+                          >
+                            <input
+                              autocomplete="off"
+                              name="event-tag"
+                              type="radio"
+                              value="bg-default"
+                              (click)="radios = 'bg-default'"
+                            />
+                          </label>
+      
+                          <label
+                            class=" btn bg-primary"
+                            [ngClass]="{ active: radios === 'bg-primary' }"
+                          >
+                            <input
+                              autocomplete="off"
+                              name="event-tag"
+                              type="radio"
+                              value="bg-primary"
+                              (click)="radios = 'bg-primary'"
+                            />
+                          </label>
+                        </div>
+                      </div>
+      
+                      <div class=" form-group">
+                        <label class=" form-control-label"> Description </label>
+      
+                        <textarea
+                          class=" form-control form-control-alternative edit-event--description textarea-autosize"
+                          placeholder="Event Desctiption"
+                          value="{{ eventDescription }}"
+                          (change)="getNewEventDescription($event)"
+                        ></textarea>
+      
+                        <i class=" form-group--bar"> </i>
+                      </div>
+      
+                      <input class=" edit-event--id" type="hidden" />
+                    </form>
+                  </div>
+      
+                  <div class=" modal-footer">
+                    <button
+                      class=" btn btn-primary"
+                      data-calendar="update"
+                      (click)="updateEvent()"
+                    >
+                      Update
+                    </button>
+      
+                    <button
+                      class=" btn btn-danger"
+                      data-calendar="delete"
+                      (click)="deleteEventSweetAlert()"
+                    >
+                      Delete
+                    </button>
+      
+                    <button
+                      class=" btn btn-link ml-auto"
+                      data-dismiss="modal"
+                      (click)="editModal.hide()"
+                    >
+                      Close
+                    </button>
+                  </div>
+                </ng-template>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class=" col-xl-6">
+      <div class=" card">
+        <div class=" card-header">
+          <div class="row" style="justify-content: space-between;">
+            <div class="col-6"><h5 class=" h3 mb-0">SLA Score %</h5></div>
+          </div>
+        </div>
+        
+        <div class=" card-body">
+          <div class="chart" id="chartdiv3">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

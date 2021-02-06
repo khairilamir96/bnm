@@ -1,0 +1,354 @@
+<div class=" header pb-6">
+  <div class=" container-fluid">
+    <div class=" header-body">
+      <div class=" row align-items-center py-4">
+      </div>     
+    </div>
+  </div>
+</div>
+
+<div class=" container-fluid mt--6">
+  <div class=" row">
+    <div class=" col-xl-12">
+      <div class=" card">
+        <div class=" card-header">
+          <div class="row">
+            <div class="col-md-6"><h5 class=" h3 mb-0">Registered User By Month</h5></div>
+          </div>
+        </div>
+        
+        <div class=" card-body">
+          <div class=" chart" id="chartdiv18">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class=" row">
+    <div class=" col-xl-12">
+      <div class=" card">
+        <div class=" card-header">
+          <h3 class=" mb-0">User List</h3>
+        </div>       
+        <div class=" card-body">
+            
+          <div class=" table-responsive">
+            <table class=" table align-items-center table-flush">
+              <thead class=" thead-light">
+                <tr>
+                  <th>No.</th>
+      
+                  <th>Name</th>
+      
+                  <th>Role Access</th>
+      
+                  <th>Created</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+      
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Abu</td>
+                  <td>
+                    <div class=" custom-control custom-checkbox mb-3">
+                      <input
+                        class=" custom-control-input"
+                        id="customCheck1"
+                        type="checkbox"
+                      />
+  
+                      <label class=" custom-control-label" for="customCheck1">
+                        Add Data
+                      </label>
+                    </div>
+                    <div class=" custom-control custom-checkbox mb-3">
+                      <input
+                        class=" custom-control-input"
+                        id="customCheck2"
+                        type="checkbox"
+                      />
+  
+                      <label class=" custom-control-label" for="customCheck2">
+                        Update Data
+                      </label>
+                    </div>
+                    <div class=" custom-control custom-checkbox mb-3">
+                      <input
+                        class=" custom-control-input"
+                        id="customCheck3"
+                        type="checkbox"
+                      />
+  
+                      <label class=" custom-control-label" for="customCheck3">
+                        Export Data
+                      </label>
+                    </div>
+                    <div class=" custom-control custom-checkbox mb-3">
+                      <input
+                        class=" custom-control-input"
+                        id="customCheck4"
+                        type="checkbox"
+                      />
+  
+                      <label class=" custom-control-label" for="customCheck4">
+                        Upload File
+                      </label>
+                    </div>
+                    <div class=" custom-control custom-checkbox mb-3">
+                      <input
+                        class=" custom-control-input"
+                        id="customCheck5"
+                        type="checkbox"
+                      />
+  
+                      <label class=" custom-control-label" for="customCheck5">
+                        Portal
+                      </label>
+                    </div>
+                  </td>
+                  <td>12/03/2020</td>
+
+                  <td>
+                    <a
+                    class="table-action"
+                    tooltip="Edit"
+                    placement="top"
+                    data-target="#modal-default"
+                    data-toggle="modal"
+                    type="button"
+                    (click)="openDefaultModal(modalDefault)"
+                  >
+                    <i class=" fas fa-user-edit"> </i>
+                  </a>
+                  </td>
+                  <ng-template #modalDefault>
+                    <div class=" modal-header">
+                      <h6 class=" modal-title" id="modal-title-default">
+                        Create New User
+                      </h6>
+    
+                      <button
+                        aria-label="Close"
+                        class=" close"
+                        data-dismiss="modal"
+                        type="button"
+                        (click)="defaultModal.hide()"
+                      >
+                        <span aria-hidden="true"> × </span>
+                      </button>
+                    </div>
+    
+                    <div class=" modal-body">
+                      <div class="row">
+                        <div class="col-12">
+                          <label
+                            class=" form-control-label"
+                            for="exampleFormControlTextarea1"
+                          >
+                            Name
+                          </label>
+                          <input
+                            class="form-control mb-2"
+                            placeholder=""
+                            type="text"
+                          />
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12">
+                          <label
+                            class=" form-control-label"
+                            for="exampleFormControlTextarea1"
+                          >
+                            Phone Number
+                          </label>
+                          <input
+                            class="form-control mb-2"
+                            placeholder=""
+                            type="text"
+                          />
+                        </div>
+                      </div>
+                    </div>
+    
+                    <div class=" modal-footer" style="justify-content: end;">
+                      <button class=" btn btn-danger" type="button">
+                        Close
+                      </button>
+    
+                      <button
+                        class=" btn btn-success"
+                        data-dismiss="modal"
+                        type="button"
+                        (click)="defaultModal.hide()"
+                      >
+                        Create
+                      </button>
+                    </div>
+                  </ng-template> 
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Ali</td>
+                  <td>
+                    <div class=" custom-control custom-checkbox mb-3">
+                      <input
+                        class=" custom-control-input"
+                        id="customCheck1"
+                        type="checkbox"
+                      />
+  
+                      <label class=" custom-control-label" for="customCheck1">
+                        Add Data
+                      </label>
+                    </div>
+                    <div class=" custom-control custom-checkbox mb-3">
+                      <input
+                        class=" custom-control-input"
+                        id="customCheck2"
+                        type="checkbox"
+                      />
+  
+                      <label class=" custom-control-label" for="customCheck2">
+                        Update Data
+                      </label>
+                    </div>
+                    <div class=" custom-control custom-checkbox mb-3">
+                      <input
+                        class=" custom-control-input"
+                        id="customCheck3"
+                        type="checkbox"
+                      />
+  
+                      <label class=" custom-control-label" for="customCheck3">
+                        Export Data
+                      </label>
+                    </div>
+                    <div class=" custom-control custom-checkbox mb-3">
+                      <input
+                        class=" custom-control-input"
+                        id="customCheck4"
+                        type="checkbox"
+                      />
+  
+                      <label class=" custom-control-label" for="customCheck4">
+                        Upload File
+                      </label>
+                    </div>
+                    <div class=" custom-control custom-checkbox mb-3">
+                      <input
+                        class=" custom-control-input"
+                        id="customCheck5"
+                        type="checkbox"
+                      />
+  
+                      <label class=" custom-control-label" for="customCheck5">
+                        Portal
+                      </label>
+                    </div>
+                  </td>
+                  <td>10/03/2020</td>
+
+                  <td>
+                    <a
+                    class="table-action"
+                    tooltip="Edit"
+                    placement="top"
+                    data-target="#modal-default"
+                    data-toggle="modal"
+                    type="button"
+                    (click)="openDefaultModal(modalDefault)"
+                  >
+                    <i class=" fas fa-user-edit"> </i>
+                  </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Ain</td>
+                  <td>
+                    <div class=" custom-control custom-checkbox mb-3">
+                      <input
+                        class=" custom-control-input"
+                        id="customCheck1"
+                        type="checkbox"
+                      />
+  
+                      <label class=" custom-control-label" for="customCheck1">
+                        Add Data
+                      </label>
+                    </div>
+                    <div class=" custom-control custom-checkbox mb-3">
+                      <input
+                        class=" custom-control-input"
+                        id="customCheck2"
+                        type="checkbox"
+                      />
+  
+                      <label class=" custom-control-label" for="customCheck2">
+                        Update Data
+                      </label>
+                    </div>
+                    <div class=" custom-control custom-checkbox mb-3">
+                      <input
+                        class=" custom-control-input"
+                        id="customCheck3"
+                        type="checkbox"
+                      />
+  
+                      <label class=" custom-control-label" for="customCheck3">
+                        Export Data
+                      </label>
+                    </div>
+                    <div class=" custom-control custom-checkbox mb-3">
+                      <input
+                        class=" custom-control-input"
+                        id="customCheck4"
+                        type="checkbox"
+                      />
+  
+                      <label class=" custom-control-label" for="customCheck4">
+                        Upload File
+                      </label>
+                    </div>
+                    <div class=" custom-control custom-checkbox mb-3">
+                      <input
+                        class=" custom-control-input"
+                        id="customCheck5"
+                        type="checkbox"
+                      />
+  
+                      <label class=" custom-control-label" for="customCheck5">
+                        Portal
+                      </label>
+                    </div>
+                  </td>
+                  <td>9/03/2020</td>
+
+                  <td>
+                    <a
+                    class="table-action"
+                    tooltip="Edit"
+                    placement="top"
+                    data-target="#modal-default"
+                    data-toggle="modal"
+                    type="button"
+                    (click)="openDefaultModal(modalDefault)"
+                  >
+                    <i class=" fas fa-user-edit"> </i>
+                  </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+             </div>
+          </div>
+        </div>
+  </div>
+</div>
+

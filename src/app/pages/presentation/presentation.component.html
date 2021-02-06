@@ -1,0 +1,103 @@
+<section class="py-7 py-lg-8 pt-lg-9" style="background-image: url('assets/img/brand/bnmb.jpg'); background-size:cover; background-position: center center;background-attachment:fixed;">
+  <div class=" main-content">
+    <div class=" container mt--8 pb-5">
+      <div class=" row justify-content-center">
+        <div class=" col-lg-5 col-md-7">
+          <div class=" card border-0 mb-0" >
+            <div class=" card-header bg-transparent" style="text-align: center; "> 
+              <a class="navbar-brand" [routerLink]="['/presentation']">
+              <img src="assets/img/brand/bnm.png" style="height:150px;"/>
+              </a>
+              <h1>ASSET MANAGEMENT SYSTEM</h1>
+            </div>
+            <div class=" card-body px-lg-5 py-lg-5">
+              <div class=" text-center mb-4">
+                <span style="color:rgb(153, 113, 113);">Login to Your Acount</span>
+              </div>
+  
+              <form role="form">
+                <div
+                  class="form-group mb-3"
+                >
+                  <div class="input-group input-group-alternative">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"
+                        ><i class="fas fa-user-alt"></i
+                      ></span>
+                    </div>
+                    <input
+                      class="form-control"
+                      placeholder="Username"
+                      type="text"
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group input-group-alternative">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"
+                        ><i class="ni ni-lock-circle-open"></i
+                      ></span>
+                    </div>
+                    <input
+                      class="form-control"
+                      placeholder="Password"
+                      type="password"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="custom-control custom-control-alternative custom-checkbox"
+                >
+                  <input
+                    class="custom-control-input"
+                    id=" customCheckLogin"
+                    type="checkbox"
+                  />
+                  <label class="custom-control-label" for=" customCheckLogin">
+                    <span>Remember me</span>
+                  </label>
+                </div>
+                <div class="text-center">
+                  <button 
+                  type="button"
+                   class="btn btn-primary my-4 col-12"
+                   routerLinkActive="active"
+                   [routerLink]="['/dashboards']"
+                   >
+                    Sign in
+                  </button>
+                </div>
+              </form>
+              <div class=" row mt-3">
+                <div class=" col-6">
+                  <a
+                   class="nav-link text-black"
+                   routerLinkActive="active"
+                   [routerLink]="['/examples/forgot']"
+                  >
+                    <small> Forgot password? </small>
+                  </a>
+                </div>
+      
+                <div class=" col-6 text-right">
+                  <a
+                   class="nav-link text-black"
+                   routerLinkActive="active"
+                  [routerLink]="['/examples/register']"
+                  >
+                    <small> Create new account </small>
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+  
+         
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

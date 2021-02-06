@@ -1,0 +1,352 @@
+<div class=" header pb-6 pt-6">
+</div>
+
+<div class=" container-fluid mt--6">
+  <div class=" row">
+    <div class=" col-xl-12">
+      <div class=" card">
+        <div class=" card-header">
+          <div class="row" style="justify-content: space-between;">
+            <div class="col-auto"><h5 class=" h3 mb-0">Daily Consumable</h5></div>           
+          </div>
+        </div>        
+        <div class=" card-body">
+          <div class="chart" id="chartdiv7">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=" row">
+    <div class=" col-xl-6">
+      <div class=" card">
+        <div class=" card-header">
+          <div class="row" style="justify-content: space-between;">
+            <div class="col-auto"><h5 class=" h3 mb-0">Overall Consumable</h5></div>
+          </div>
+        </div>
+        
+        <div class=" card-body">
+          <div class="chart" id="chartdiv8">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class=" col-xl-6">
+      <div class=" card">
+        <div class=" card-header">
+          <div class="row" style="justify-content: space-between;">
+            <div class="col-12"><h5 class=" h3 mb-0">Current Stockpile VS Minimum Allowable Stockpile</h5></div>
+          </div>
+        </div>
+        
+        <div class=" card-body">
+          <div class="chart" id="chartdiv9">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=" row">
+    <div class=" col-xl-12">
+      <div class=" card">
+        <div class=" card-header">
+          <div class="row">
+            <div class="col-sm-6">
+              <h3 class=" mb-0">Find Stock</h3>
+            </div>
+            <div class="col-sm-6 text-right">
+              <button
+              class=" btn btn-sm btn-info"
+                data-target="#modal-default"
+                data-toggle="modal"
+                type="button"
+                (click)="openDefaultModal(modalDefault)"
+              >
+                New Stock
+              </button>    
+              <ng-template #modalDefault>
+                <div class=" modal-header">
+                  <h6 class=" modal-title" id="modal-title-default">
+                    Create New Stock
+                  </h6>
+          
+                  <button
+                    aria-label="Close"
+                    class=" close"
+                    data-dismiss="modal"
+                    type="button"
+                    (click)="defaultModal.hide()"
+                  >
+                    <span aria-hidden="true"> × </span>
+                  </button>
+                </div>
+          
+                <div class=" modal-body">
+                  <div class="row">
+                    <div class="col-6">
+                      <label
+                        class=" form-control-label"
+                        for="exampleFormControlTextarea1"
+                      >
+                        Type
+                      </label>
+                      <input
+                        class="form-control mb-2"
+                        placeholder=""
+                        type="text"
+                      />
+                    </div>
+                    <div class="col-6">
+                      <label
+                        class=" form-control-label"
+                        for="exampleFormControlTextarea1"
+                      >
+                         Date Registered
+                      </label>
+                      <input
+                        class="form-control mb-2"
+                        placeholder=""
+                        type="date"
+                      />
+                    </div>                    
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <label
+                        class=" form-control-label"
+                        for="exampleFormControlTextarea1"
+                      >
+                        Owner
+                      </label>
+                      <input
+                        class="form-control mb-2"
+                        placeholder=""
+                        type="text"
+                      />
+                    </div>
+                    <div class="col-6">
+                      <label
+                        class=" form-control-label"
+                        for="exampleFormControlTextarea1"
+                      >
+                        Location ID
+                      </label>
+                      <input
+                        class="form-control mb-2"
+                        placeholder=""
+                        type="text"
+                      />
+                    </div>                       
+                  </div><br>
+                  <div class="row">
+                    <div class="col-6">
+                      <label
+                        class=" form-control-label"
+                        for="exampleFormControlTextarea1"
+                      >
+                        Minimum Threshold
+                      </label>
+                      <input
+                        class="form-control mb-2"
+                        placeholder=""
+                        type="text"
+                      />
+                    </div>
+                    <div class="col-6">
+                      <label
+                        class=" form-control-label"
+                        for="exampleFormControlTextarea1"
+                      >
+                        Reminder
+                      </label>
+                      <input
+                        class="form-control mb-2"
+                        placeholder="Yes / No"
+                        type="text"
+                      />
+                    </div>                      
+                  </div>
+                  <div class=" modal-footer" style="justify-content: end;">
+                    <button class=" btn btn-danger" type="button">
+                      Back
+                    </button>
+          
+                    <button
+                      class=" btn btn-success"
+                      data-dismiss="modal"
+                      type="button"
+                      (click)="defaultModal.hide()"
+                    >
+                       Submit
+                    </button>
+                  </div>
+                </div>
+              </ng-template>     
+            </div>
+          </div>
+        </div>       
+        <div class=" card-body">
+          <div class=" row">
+            <div class=" col-md-2">
+              <div class=" form-group">
+                <label class=" form-control-label"> Type </label>
+  
+                <input
+                  class=" form-control"
+                  placeholder=""
+                  type="text"
+                />
+              </div>
+            </div>
+        
+            <div class=" col-md-2">
+              <div class=" form-group">
+                <label class=" form-control-label"> Owner </label>
+  
+                <input
+                  class=" form-control"
+                  placeholder=""
+                  type="text"
+                />
+              </div>
+            </div>
+            <div class=" col-md-2">
+              <div class=" form-group">
+                <label class=" form-control-label"> ID Location </label>
+  
+                <input
+                  class=" form-control"
+                  placeholder=""
+                  type="text"
+                />
+              </div>
+            </div>
+            <div class=" col-md-2">
+              <div class=" form-group">
+                <label class=" form-control-label"> Date Registered </label>
+  
+                <input
+                    class=" form-control"
+                    id="example-date-input"
+                    type="date"
+                    value="2020-11-23"
+                  />
+              </div>
+            </div>
+            <div class=" col-md-4 text-right">
+              <button class=" btn btn-success" type="button" style="margin-top: 30px;">Search</button>
+            </div>  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=" row">
+    <div class=" col-xl-12">
+      <div class=" card">
+        <div class=" card-header">
+          <h3 class=" mb-0">Stock List</h3>
+        </div>       
+        <div class=" card-body">
+            
+          <div class=" table-responsive">
+            <table class=" table align-items-center table-flush">
+              <thead class=" thead-light">
+                <tr>
+                  <th>No.</th>
+      
+                  <th>Type</th>
+      
+                  <th>Owner</th>
+      
+                  <th>Location ID</th>
+                  <th>Date Registered</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+      
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>A</td>
+                  <td>Ali</td>
+                  <td>L001</td>
+                  <td>12/03/2020</td>
+                  <td>
+                    <a
+                    class="table-action"
+                    tooltip="Edit"
+                    placement="top"
+                  >
+                    <i class=" fas fa-user-edit"> </i>
+                  </a>
+
+                  <a
+                    class="table-action"
+                    tooltip="Delete"
+                    placement="top"
+                  >
+                    <i class=" fas fa-trash"> </i>
+                  </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>B</td>
+                  <td>Abu</td>
+                  <td>L002</td>
+                  <td>12/04/2020</td>
+                  <td>
+                    <a
+                    class="table-action"
+                    tooltip="Edit"
+                    placement="top"
+                  >
+                    <i class=" fas fa-user-edit"> </i>
+                  </a>
+
+                  <a
+                    class="table-action"
+                    tooltip="Delete"
+                    placement="top"
+                  >
+                    <i class=" fas fa-trash"> </i>
+                  </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>A</td>
+                  <td>Ain</td>
+                  <td>L003</td>
+                  <td>07/12/2020</td>
+                  <td>
+                    <a
+                    class="table-action"
+                    tooltip="Edit"
+                    placement="top"
+                  >
+                    <i class=" fas fa-user-edit"> </i>
+                  </a>
+
+                  <a
+                    class="table-action"
+                    tooltip="Delete"
+                    placement="top"
+                  >
+                    <i class=" fas fa-trash"> </i>
+                  </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+             </div>
+          </div>
+        </div>
+  </div>
+</div>
+
+
+

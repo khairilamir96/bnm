@@ -1,0 +1,13 @@
+<!-- Sidenav -->
+<div class="" (window:resize)="isMobile($event)">
+  <app-sidebar
+    [ngClass]="{ 'sidenav fixed-left': isMobileResolution === false }"
+  ></app-sidebar>
+  <div class="main-content">
+    <!-- Top navbar -->
+    <app-navbar></app-navbar>
+    <!-- Pages -->
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+  </div>
+</div>

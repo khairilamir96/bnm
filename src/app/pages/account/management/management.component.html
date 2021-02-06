@@ -1,0 +1,479 @@
+<div class=" header pb-6 pt-6">
+</div>
+
+<div class=" container-fluid mt--6">
+  <div class=" row">
+    <div class=" col-xl-6">
+      <div class=" card">
+        <div class=" card-header">
+          <div class="row" style="justify-content: space-between;">
+            <div class="col-auto"><h5 class=" h3 mb-0">Overal Operating Expense</h5></div>
+          </div>
+        </div>
+        
+        <div class=" card-body">
+          <div class="chart" id="chartdiv21">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class=" col-xl-6">
+      <div class=" card">
+        <div class=" card-header">
+          <div class="row" style="justify-content: space-between;">
+            <div class="col-auto"><h5 class=" h3 mb-0">Overal Capital Expense</h5></div>
+          </div>
+        </div>
+        
+        <div class=" card-body">
+          <div class="chart" id="chartdiv22">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=" row">
+    <div class=" col-xl-12">
+      <div class=" card">
+        <div class=" card-header">
+          <div class="row" style="justify-content: space-between;">
+            <div class="col-6"><h5 class=" h3 mb-0">Monthly Purchase/Acquisition</h5></div>
+          </div>
+        </div>
+        
+        <div class=" card-body">
+          <div class="chart" id="chartdiv23">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=" row">
+    <div class=" col-xl-6">
+      <div class=" card">
+        <div class=" card-header">
+          <div class="row" style="justify-content: space-between;">
+            <div class="col-auto"><h5 class=" h3 mb-0">Currency Exchange</h5></div>
+          </div>
+        </div>
+        
+        <div class=" card-body">
+          <div class="row">
+            <label
+              class=" form-control-label"
+              for="exampleFormControlTextarea1"
+            >
+              Total Money
+            </label>
+            <input
+              class="form-control mb-2"
+              placeholder="Example: 10.00"
+              type="text"
+            />          
+          </div>
+          <div class="row">
+            <label
+              class=" form-control-label"
+              for="exampleFormControlTextarea1"
+            >
+              From
+            </label>
+            <select class=" form-control mb-2" id="exampleFormControlSelect3">
+              <option> Malaysia (RM) </option>         
+              <option> USD Dollar ($) </option>
+              <option> Euro </option>
+            </select>                     
+          </div>
+          <div class="row">
+            <label
+              class=" form-control-label"
+              for="exampleFormControlTextarea1"
+            >
+              To
+            </label>
+            <select class=" form-control mb-2" id="exampleFormControlSelect3">
+              <option> Malaysia (RM) </option>         
+              <option> USD Dollar ($) </option>
+              <option> Euro </option>
+            </select>                     
+          </div>
+          <div class="row">
+            <label
+              class=" form-control-label"
+              for="exampleFormControlTextarea1"
+            >
+              Output
+            </label>
+            <input
+              class="form-control mb-2"
+              placeholder="Example: 10.00"
+              type="text"
+            />          
+          </div>
+          <div style="text-align:center;">
+            <button class=" btn btn-success" type="button">
+              Change
+            </button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <div class=" col-xl-6">
+      <div class=" card">
+        <div class=" card-header">
+          <div class="row" style="justify-content: space-between;">
+            <div class="col-auto"><h5 class=" h3 mb-0">Foreign and Local Currency Values</h5></div>
+          </div>
+        </div>
+        
+        <div class=" card-body">
+          <div class="chart" id="chartdiv24">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=" row">
+    <div class=" col-xl-12">
+      <div class=" card">
+        <div class=" card-header">
+          <div class="row">
+            <div class="col-sm-6">
+              <h3 class=" mb-0">Find Account Register</h3>
+            </div>
+            <div class="col-sm-6 text-right">
+              <button
+              class=" btn btn-sm btn-info"
+                data-target="#modal-default"
+                data-toggle="modal"
+                type="button"
+                (click)="openDefaultModal(modalDefault)"
+              >
+                New Account Registry
+              </button>    
+              <ng-template #modalDefault>
+                <div class=" modal-header">
+                  <h6 class=" modal-title" id="modal-title-default">
+                    Create New Account Registry
+                  </h6>
+
+                  <button
+                    aria-label="Close"
+                    class=" close"
+                    data-dismiss="modal"
+                    type="button"
+                    (click)="defaultModal.hide()"
+                  >
+                    <span aria-hidden="true"> × </span>
+                  </button>
+                </div>
+
+                <div class=" modal-body">
+                  <div class="row">
+                    <div class=" card-header">
+                      <h3>Life Cycle Management</h3>
+                    </div>
+                    <div class=" card-body">
+                      <div class="chart" id="chartdiv25">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">                   
+                    <div class="col-6">
+                      <label
+                        class=" form-control-label"
+                        for="exampleFormControlTextarea1"
+                      >
+                        Category
+                      </label>
+                      <input
+                        class="form-control mb-2"
+                        placeholder=""
+                        type="text"
+                      />
+                    </div>
+                    <div class="col-6">
+                      <label
+                        class=" form-control-label"
+                        for="exampleFormControlTextarea1"
+                      >
+                        Type of Transaction
+                      </label>
+                      <select class=" form-control mb-2" id="exampleFormControlSelect3">
+                        <option> Purchase/ Acquisition </option>         
+                        <option> Capital Expense </option>
+                        <option> Operating Expense </option>
+                        <option> Expense-Off </option>
+                      </select>
+                    </div>                   
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <label
+                        class=" form-control-label"
+                        for="exampleFormControlTextarea1"
+                      >
+                        Asset ID
+                      </label>
+                      <input
+                        class="form-control mb-2"
+                        placeholder=""
+                        type="text"
+                      />
+                    </div>
+                    <div class="col-6">
+                      <label
+                        class=" form-control-label"
+                        for="exampleFormControlTextarea1"
+                      >
+                        Type of Expense
+                      </label>
+                      <select class=" form-control mb-2" id="exampleFormControlSelect3">
+                        <option> Expense-Off </option>         
+                        <option> Capital Expense </option>
+                      </select>
+                    </div>                      
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <label
+                        class=" form-control-label"
+                        for="exampleFormControlTextarea1"
+                      >
+                        Date of Account
+                      </label>
+                      <input
+                        class="form-control mb-2"
+                        placeholder=""
+                        type="date"
+                      />
+                    </div>                        
+                    <div class="col-6">
+                      <label
+                        class=" form-control-label"
+                        for="exampleFormControlTextarea1"
+                      >
+                        Work Order Serial No.
+                      </label>
+                      <input
+                        class="form-control mb-2"
+                        placeholder=""
+                        type="text"
+                      />
+                    </div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <label
+                        class=" form-control-label"
+                        for="exampleFormControlTextarea1"
+                      >
+                        Budget Approved (RM)
+                      </label>
+                      <input
+                        class="form-control mb-2"
+                        placeholder=""
+                        type="text"
+                      />
+                    </div>                        
+                    <div class="col-6">
+                      <label
+                        class=" form-control-label"
+                        for="exampleFormControlTextarea1"
+                      >
+                        Work Order Cost(RM)
+                      </label>
+                      <input
+                        class="form-control mb-2"
+                        placeholder="400"
+                        type="text"
+                      />
+                    </div>
+                    
+                  </div>
+                  <div class=" modal-footer" style="justify-content: end;">
+                    <button class=" btn btn-danger" type="button">
+                      Back
+                    </button>
+  
+                    <button
+                      class=" btn btn-success"
+                      data-dismiss="modal"
+                      type="button"
+                      (click)="defaultModal.hide()"
+                    >
+                       Submit
+                    </button>
+                  </div>
+                </div>
+              </ng-template>    
+            </div>
+          </div>
+        </div>       
+        <div class=" card-body">
+          <div class=" row">
+            <div class=" col-md-2">
+              <div class=" form-group">
+                <label class=" form-control-label"> Category </label>
+  
+                <select class=" form-control mb-2" id="exampleFormControlSelect3">
+                  <option> Lift & Elevators </option>         
+                  <option> CWSP </option>
+                  <option> FDPS </option>
+                  <option> ACMV </option>
+                </select>
+              </div>
+            </div>
+        
+            <div class=" col-md-2">
+              <div class=" form-group">
+                <label class=" form-control-label"> Type of Transaction </label>
+  
+                <input
+                  class=" form-control"
+                  placeholder=""
+                  type="text"
+                />
+              </div>
+            </div>
+            <div class=" col-md-2">
+              <div class=" form-group">
+                <label class=" form-control-label"> Asset ID </label>
+  
+                <input
+                  class=" form-control"
+                  placeholder=""
+                  type="text"
+                />
+              </div>
+            </div>
+            <div class=" col-md-2">
+              <div class=" form-group">
+                <label class=" form-control-label"> Date Registered </label>
+  
+                <input
+                    class=" form-control"
+                    id="example-date-input"
+                    type="date"
+                    value="2020-11-23"
+                  />
+              </div>
+            </div>
+            <div class=" col-md-4 text-right">
+              <button class=" btn btn-success" type="button" style="margin-top: 30px;">Search</button>
+            </div>  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <<div class=" row">
+    <div class=" col-xl-12">
+      <div class=" card">
+        <div class=" card-header">
+          <h3 class=" mb-0">Account List</h3>
+        </div>       
+        <div class=" card-body">
+            
+          <div class=" table-responsive">
+            <table class=" table align-items-center table-flush">
+              <thead class=" thead-light">
+                <tr>
+                  <th>No.</th>
+      
+                  <th>Category</th>
+      
+                  <th>Type of Transaction</th>
+                  <th>Asset ID</th>
+                  <th>Date Registered</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+      
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Landscape</td>
+                  <td>Capital Expense</td>
+                  <td>AID01</td>
+                  <td>12/03/2020</td>
+
+                  <td>
+                    <a
+                    class="table-action"
+                    tooltip="Edit"
+                    placement="top"
+                  >
+                    <i class=" fas fa-user-edit"> </i>
+                  </a>
+
+                  <a
+                    class="table-action"
+                    tooltip="Delete"
+                    placement="top"
+                  >
+                    <i class=" fas fa-trash"> </i>
+                  </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Cleaning</td>
+                  <td>Expense-Off</td>
+                  <td>AID02</td>
+                  <td>12/04/2020</td>
+
+                  <td>
+                    <a
+                    class="table-action"
+                    tooltip="Edit"
+                    placement="top"
+                  >
+                    <i class=" fas fa-user-edit"> </i>
+                  </a>
+
+                  <a
+                    class="table-action"
+                    tooltip="Delete"
+                    placement="top"
+                  >
+                    <i class=" fas fa-trash"> </i>
+                  </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Waste Management</td>
+                  <td>Purchase</td>
+                  <td>AID03</td>
+                  <td>07/12/2020</td>
+
+                  <td>
+                    <a
+                    class="table-action"
+                    tooltip="Edit"
+                    placement="top"
+                  >
+                    <i class=" fas fa-user-edit"> </i>
+                  </a>
+
+                  <a
+                    class="table-action"
+                    tooltip="Delete"
+                    placement="top"
+                  >
+                    <i class=" fas fa-trash"> </i>
+                  </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+             </div>
+          </div>
+        </div>
+  </div>
+</div>
+

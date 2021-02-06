@@ -1,0 +1,11 @@
+//
+// Badge floating
+//
+
+.btn {
+  .badge-floating {
+    &.badge:not(.badge-circle) {
+      transform: translate(-30%, 50%);
+    }
+  }
+}

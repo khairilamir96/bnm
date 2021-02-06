@@ -1,0 +1,343 @@
+<div class=" header pb-6 pt-6">
+</div>
+
+<div class=" container-fluid mt--6">
+  <div class=" row">
+    <div class=" col-xl-12">
+      <div class=" card">
+        <div class=" card-header">
+          <div class="row" style="justify-content: space-between;">
+            <div class="col-auto"><h5 class=" h3 mb-0">License Expiry</h5></div>
+          </div>
+        </div>
+        
+        <div class=" card-body">
+          <div class="chart" id="chartdiv16">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=" row">
+    <div class=" col-xl-12">
+      <div class=" card">
+        <div class=" card-header">
+          <div class="row" style="justify-content: space-between;">
+            <div class="col-6"><h5 class=" h3 mb-0">Asset License Category</h5></div>
+          </div>
+        </div>
+        
+        <div class=" card-body">
+          <div class="chart" id="chartdiv17">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=" row">
+    <div class=" col-xl-12">
+      <div class=" card">
+        <div class=" card-header">
+          <div class="row">
+            <div class="col-sm-6">
+              <h3 class=" mb-0">Find License</h3>
+            </div>
+            <div class="col-sm-6 text-right">
+              <button
+              class=" btn btn-sm btn-info"
+                data-target="#modal-default"
+                data-toggle="modal"
+                type="button"
+                (click)="openDefaultModal(modalDefault)"
+              >
+                New License
+              </button>    
+              <ng-template #modalDefault>
+                <div class=" modal-header">
+                  <h6 class=" modal-title" id="modal-title-default">
+                    Create New License
+                  </h6>
+
+                  <button
+                    aria-label="Close"
+                    class=" close"
+                    data-dismiss="modal"
+                    type="button"
+                    (click)="defaultModal.hide()"
+                  >
+                    <span aria-hidden="true"> × </span>
+                  </button>
+                </div>
+
+                <div class=" modal-body">
+                  <div class="row">
+                    <div class="col-6">
+                      <label
+                        class=" form-control-label"
+                        for="exampleFormControlTextarea1"
+                      >
+                        Asset ID
+                      </label>
+                      <input
+                        class="form-control mb-2"
+                        placeholder=""
+                        type="text"
+                      />
+                    </div>
+                    <div class="col-6">
+                      <label
+                        class=" form-control-label"
+                        for="exampleFormControlTextarea1"
+                      >
+                        Location ID
+                      </label>
+                      <input
+                        class="form-control mb-2"
+                        placeholder=""
+                        type="text"
+                      />
+                    </div>                   
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <label
+                        class=" form-control-label"
+                        for="exampleFormControlTextarea1"
+                      >
+                        Enforcement Agency
+                      </label>
+                      <input
+                        class="form-control mb-2"
+                        placeholder=""
+                        type="text"
+                      />
+                    </div>
+                    <div class="col-6">
+                      <label
+                        class=" form-control-label"
+                        for="exampleFormControlTextarea1"
+                      >
+                        Start Date
+                      </label>
+                      <input
+                        class="form-control mb-2"
+                        placeholder=""
+                        type="date"
+                      />
+                    </div>                        
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <label
+                        class=" form-control-label"
+                        for="exampleFormControlTextarea1"
+                      >
+                        Expiry Date
+                      </label>
+                      <input
+                        class="form-control mb-2"
+                        placeholder=""
+                        type="date"
+                      />
+                    </div>                        
+                    <div class="col-6">
+                      <label
+                        class=" form-control-label"
+                        for="exampleFormControlTextarea1"
+                      >
+                        Reminder
+                      </label>
+                      <select class=" form-control mb-2" id="exampleFormControlSelect3">
+                        <option> 1 Week Before </option>         
+                        <option> 2 Weeks Before </option>
+                        <option> 1 Month Before </option>
+                        <option> 2 Month Before </option>
+                        <option> 3 Month Before </option>
+                      </select>
+                    </div>
+                    
+                  </div>
+                  <div class=" modal-footer" style="justify-content: end;">
+                    <button class=" btn btn-danger" type="button">
+                      Back
+                    </button>
+  
+                    <button
+                      class=" btn btn-success"
+                      data-dismiss="modal"
+                      type="button"
+                      (click)="defaultModal.hide()"
+                    >
+                       Submit
+                    </button>
+                  </div>
+                </div>
+              </ng-template>    
+            </div>
+          </div>
+        </div>       
+        <div class=" card-body">
+          <div class=" row">
+            <div class=" col-md-2">
+              <div class=" form-group">
+                <label class=" form-control-label"> Category </label>
+  
+                <input
+                  class=" form-control"
+                  placeholder=""
+                  type="text"
+                />
+              </div>
+            </div>
+        
+            <div class=" col-md-2">
+              <div class=" form-group">Agency
+                <label class=" form-control-label"> Owner </label>
+  
+                <input
+                  class=" form-control"
+                  placeholder=""
+                  type="text"
+                />
+              </div>
+            </div>
+            <div class=" col-md-2">
+              <div class=" form-group">
+                <label class=" form-control-label"> ID Location </label>
+  
+                <input
+                  class=" form-control"
+                  placeholder=""
+                  type="text"
+                />
+              </div>
+            </div>
+            <div class=" col-md-2">
+              <div class=" form-group">
+                <label class=" form-control-label"> Date Registered </label>
+  
+                <input
+                    class=" form-control"
+                    id="example-date-input"
+                    type="date"
+                    value="2020-11-23"
+                  />
+              </div>
+            </div>
+            <div class=" col-md-4 text-right">
+              <button class=" btn btn-success" type="button" style="margin-top: 30px;">Search</button>
+            </div>  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=" row">
+    <div class=" col-xl-12">
+      <div class=" card">
+        <div class=" card-header">
+          <h3 class=" mb-0">License List</h3>
+        </div>       
+        <div class=" card-body">
+            
+          <div class=" table-responsive">
+            <table class=" table align-items-center table-flush">
+              <thead class=" thead-light">
+                <tr>
+                  <th>No.</th>
+      
+                  <th>Category</th>
+      
+                  <th>Agency</th>
+      
+                  <th>Date Registered</th>
+                  <th>Occurence</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+      
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Landscape</td>
+                  <td>Agency A</td>
+                  <td>12/03/2020</td>
+                  <td>Daily</td>
+
+                  <td>
+                    <a
+                    class="table-action"
+                    tooltip="Edit"
+                    placement="top"
+                  >
+                    <i class=" fas fa-user-edit"> </i>
+                  </a>
+
+                  <a
+                    class="table-action"
+                    tooltip="Delete"
+                    placement="top"
+                  >
+                    <i class=" fas fa-trash"> </i>
+                  </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Cleaning</td>
+                  <td>Agency B</td>
+                  <td>12/04/2020</td>
+                  <td>Weekly</td>
+
+                  <td>
+                    <a
+                    class="table-action"
+                    tooltip="Edit"
+                    placement="top"
+                  >
+                    <i class=" fas fa-user-edit"> </i>
+                  </a>
+
+                  <a
+                    class="table-action"
+                    tooltip="Delete"
+                    placement="top"
+                  >
+                    <i class=" fas fa-trash"> </i>
+                  </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Waste Management</td>
+                  <td>Agency C</td>
+                  <td>07/12/2020</td>
+                  <td>Monthly</td>
+
+                  <td>
+                    <a
+                    class="table-action"
+                    tooltip="Edit"
+                    placement="top"
+                  >
+                    <i class=" fas fa-user-edit"> </i>
+                  </a>
+
+                  <a
+                    class="table-action"
+                    tooltip="Delete"
+                    placement="top"
+                  >
+                    <i class=" fas fa-trash"> </i>
+                  </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+             </div>
+          </div>
+        </div>
+  </div>
+</div>
+
